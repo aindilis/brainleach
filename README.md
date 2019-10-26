@@ -25,7 +25,11 @@ APIs to it, so that people have access to more capabilities.  Pursuant
 to this I am working on auto-packaging software.  In the past I wrote
 packager, which expedites a lot of the packaging tasks for the user
 but packager never learned anything, it just was some hard coded
-tricks. So now I'm working on a system that can learn from human
+tricks. 
+
+https://github.com/aindilis/packager
+
+So now I'm working on a system that can learn from human
 packagers, it's called BrainLeach.  It's sort of a programming-
 by-demonstration system.  At this point all it really does is log all
 Emacs keys combinations, function invocations and shell commands, and
