@@ -1,0 +1,73 @@
+<system>
+  <title>
+    BrainLeach
+  </title>
+  <short-description>
+    Records users' work on various projects
+  </short-description>
+  <medium-description>
+    The point  of BrainLeach is to  record the user's  work on certain
+    projects.  By recording all the commands, grouping them and asking
+    the user to document what they are doing with the commands.
+  </medium-description>
+  <long-description>
+    The name Brain Leach was tip  of the tounge humor from Joe Gresham
+    regarding this functionality.
+    
+    Brainleach records session commands.  It keeps a basic, expandable
+    todo list (an [[HTN]]).  There  is a current task context which is
+    defined  as a  subset of  goals from  the HTN.   The  most precise
+    context  is  obtained  by  taking  the current  task  context  and
+    repeatedly applying the following rule:  if all children of a node
+    are in the set, the parent is included and the children removed.
+
+    As  atomized commands  are  recorded into  the [[Atomized  Command
+    List]],  each  terminal node  in  the  HTN  is associated  with  a
+    subsequence of  the [[Atomized  Command List]], called  the [[Task
+    Script]], s.t.  foreach element s_i in  S exists s_j in S j>i s.t.
+    depends(S_j,S_i), and  that the sequence is  sufficient to achieve
+    the task.
+
+    These   commands  can   then   be  reapplied   against  a   system
+    automatically to reobtain the result.   It is possible to edit the
+    sequences ex post facto.
+
+    All instances of [[task script]] are stored in a database that can
+    be consulted  for reference.   There are also  added to  the wiki.
+    Tasks in the HTN are associated with RT tickets.
+
+    Based on  closing of  tickets, preference relations,  and possibly
+    judgements  of  the complexity  and  necessity  of various  tasks,
+    scores are computed  for productivity that are fed  into the score
+    system.
+
+    Possibly  there should  be visualization  of the  progress  of the
+    systems in [[Problemspace]] or [[Setanta]].
+
+    There  are  checklist   lookups  and  automated  assistance.   The
+    computer can take  over the completion of more  complex tasks.  In
+    this way, [[task script]]s are automatically developed for various
+    tasks and added to a library.
+
+    The [[task script]]s  are also added to the  wiki in docbook style
+    formatting.
+
+    Comments are  also solicited from  the user, and the  system often
+    asks the user to clarify what the previous steps accomplished.
+
+    The  user is  able to  issue commands  to interact  with  the task
+    database.
+
+    For now  it only  works off  the shell and  in emacs  and possibly
+    screen, but in the future  should be more responsive to using more
+    programs.  The problem is that we cannot currently record them.
+
+    Brainleach gets Emacs input from Manager::Records::Context.
+
+    Should have  an interface  for auto-posting to  RT about  what has
+    already been done.
+
+    Records all sessions, so as to provide the ability to review later
+    when that code is complete.
+  </long-description>
+</system>

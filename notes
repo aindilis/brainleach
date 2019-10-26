@@ -1,0 +1,12 @@
+Here are some design docs.
+
+Brainleach  records session  commands.  It  keeps a  basic, expandable
+todo list.  There is a current task context which consists of a set of
+goals  that are  achieved  by  a given  action.   There are  checklist
+lookups  and automated  assistance.  The  computer can  take  over the
+completion  of more  complex  tasks.   So, in  this  way, scripts  are
+automatically developed for various tasks and added to a library.
+
+The Task is  an HTN.  Each checklist consists of a  set of steps, each
+of which is  necessary in that a later step requires  it, and the last
+step is sufficient.

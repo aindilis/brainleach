@@ -1,0 +1,20 @@
+#!/usr/bin/perl -w
+
+use BrainLeach;
+
+use UniLang::Agent::Agent;
+use UniLang::Util::Message;
+
+$UNIVERSAL::agent = UniLang::Agent::Agent->new
+  (Name => "BrainLeach",
+   ReceiveHandler => \&Receive);
+$UNIVERSAL::agent->DoNotDaemonize(1);
+$UNIVERSAL::brainleach = BrainLeach->new();
+
+sub Receive {
+  my %args = @_;
+  $UNIVERSAL::brainleach->ProcessMessage
+    (Message => $args{Message});
+}
+
+$UNIVERSAL::brainleach->Execute();
